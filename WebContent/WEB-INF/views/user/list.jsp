@@ -8,7 +8,7 @@
 <div id="page-wrapper" style="min-height: 296px;">
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class="page-header">Cooperados</h1>
+			<h1 class="page-header">Usuários</h1>
 		</div>
 		<!-- /.col-lg-12 -->
 	</div>
@@ -20,7 +20,7 @@
 				
 					<div class="panel panel-default">
                         <div class="panel-heading">
-                        	<a href="/ratecoop/licensed/addupdate">
+                        	<a href="/ratecoop/user/addupdate">
                         		<button type="button" class="btn btn-primary" >Adicionar</button>
                         	</a>
                         </div>
@@ -30,31 +30,26 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Nome</th>
-                                            <th>Telefone</th>
-                                            <th>Tipo</th>
-                                            <th>Especialidade</th>
-                                            <th>Nota</th>
+                                            <th>Usuário</th>
+                                            <th>Tipo</th>                                            
                                             <th>Opções</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <c:if test="${!empty licensedList}">
-											<c:forEach items="${licensedList}" var="licensed" varStatus="loop">
+                                        <c:if test="${!empty userList}">
+											<c:forEach items="${userList}" var="user" varStatus="loop">
 												
 												<tr class="gradeA ${loop.index % 2 == 0 ? 'even' : 'odd'}" role="row">
-													<td>${licensed.name}</td>
-													<td>${licensed.phone}</td>
-													<td>${licensed.type.description}</td>
-													<td>${licensed.speciality.description}</td>
-													<td>${licensed.rate}</td>
+													<td>${user.name}</td>
+													<td>${user.type.description}</td>
+													
 													<td style="text-align: center;">
 														
-														<a href="${actionEdit}?id=${licensed.id}">
+														<a href="${actionEdit}?id=${user.id}">
 												          <span class="glyphicon glyphicon-edit"></span>
 												        </a>
 												        
-												        <a href="${actionDelete}/${licensed.id} ">
+												        <a href="${actionDelete}/${user.id} ">
 												          <span class="glyphicon glyphicon-trash"></span>
 												        </a>
 												        

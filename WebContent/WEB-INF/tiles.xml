@@ -47,4 +47,19 @@
 		<put-attribute name="body" value="/WEB-INF/views/question/list.jsp"></put-attribute>
 	</definition>
 	
+	<definition name="user.create.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Adicionar Usuário"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/user/createUpdate.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="user.update.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Alterar Usuário"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/user/createUpdate.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="user.list.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Listar Usuários"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/user/list.jsp"></put-attribute>
+	</definition>
+	
 </tiles-definitions>	

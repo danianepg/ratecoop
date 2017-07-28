@@ -1,5 +1,8 @@
 package br.com.ratecoop.domain;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -11,6 +14,8 @@ public class User {
 	@Id
 	private String id;
 
+	@NotNull(message = "Nome deve ser informado!")
+	@NotEmpty(message = "Nome não pode ser vazio!")
 	private String name;
 	
 	private UserTypeEnum type;

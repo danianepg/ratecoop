@@ -25,16 +25,15 @@
 					<div class="row">
 						<div class="col-lg-12">
 
-							<f:form action="${action}" method="post" modelAttribute="licensed" role="form">
+							<f:form action="${action}" method="post" modelAttribute="user" role="form">
 								
-								<input type="hidden" name="id" value="${licensed.id}" />
+								<input type="hidden" name="id" value="${user.id}" />
 								
 								<div class="row">
 									<div class="col-lg-6">
 										<div class="form-group">
-											<label>Nome *</label>
+											<label>Usuário *</label>
 											<f:input path="name" cssClass="form-control" />
-											
 										</div>
 									</div>
 									<div class="col-lg-6">
@@ -49,64 +48,28 @@
 								<div class="row">
 									<div class="col-lg-6">
 										<div class="form-group">
-											<label>Endereço</label>
-											<f:input path="address" cssClass="form-control" />
-										</div>
-									</div>
-									<div class="col-lg-6">&nbsp;</div>
-								</div>
-
-								<div class="row">
-									<div class="col-lg-6">
-										<div class="form-group">
-											<label>Telefone</label>
-											<f:input path="phone" cssClass="form-control" />
-										</div>
-									</div>
-									<div class="col-lg-6">
-										<f:errors path="phone" cssClass="alert alert-danger"></f:errors>
-									</div>
-								</div>
-								
-								<div class="row">
-									<div class="col-lg-6">
-										<div class="form-group">
-											<label>Tipo</label>
-											
+											<label>Tipo:</label>
 											<f:select path="type" cssClass="form-control"  >
 												<c:forEach var="typeEnum" items="${types}">
 												    <option value="${typeEnum}"> ${typeEnum.description} </option>
 												</c:forEach>
 											</f:select>
-											
-											
 										</div>
 									</div>
-									<div class="col-lg-6">&nbsp;</div>
-								</div>
-								
-								<div class="row">
 									<div class="col-lg-6">
 										<div class="form-group">
-											<label>Especialidade</label>
-											<f:select path="speciality" cssClass="form-control"  >
-												<c:forEach var="sEnum" items="${specialities}">
-												    <option value="${sEnum}"> ${sEnum.description} </option>
-												</c:forEach>
-											</f:select>
+											<label>&nbsp;</label>
 										</div>
-									</div>
-									<div class="col-lg-6">
-										<f:errors path="speciality" cssClass="alert alert-danger"></f:errors>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="col-lg-12">
 										<button type="submit" class="btn btn-primary">Confirmar</button>
-										<a href="/ratecoop/licensed/list">
-										<button type="button" class="btn btn-default">Voltar</button>
+										<a href="/ratecoop/user/list">
+											<button type="button" class="btn btn-default">Voltar</button>
 										</a>
+										
 									</div>
 								</div>
 							</f:form>

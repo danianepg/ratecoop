@@ -19,7 +19,7 @@
                 <a href="/ratecoop/rate"><i class="fa fa-bar-chart-o fa-fw"></i>Ranking (Operadora)</a>
             </li>
             <li>
-                <a href="/ratecoop/rate"><i class="fa fa-bar-chart-o fa-fw"></i>Usuários</a>
+                <a href="/ratecoop/user/list"><i class="fa fa-bar-chart-o fa-fw"></i>Usuários (Operadora)</a>
             </li>
             
         </ul>

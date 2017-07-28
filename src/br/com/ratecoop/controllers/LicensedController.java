@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import br.com.ratecoop.domain.Licensed;
+import br.com.ratecoop.enums.LicensedTypeEnum;
+import br.com.ratecoop.enums.SpecialityEnum;
 import br.com.ratecoop.repositories.LicensedRepository;
 
 @Controller
@@ -46,11 +48,17 @@ public class LicensedController {
 			
 		}
 		
+		model.addAttribute("types", LicensedTypeEnum.values());
+		model.addAttribute("specialities", SpecialityEnum.values());
+		
 		return route;
 	}
 	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String add(@ModelAttribute("licensed") @Valid Licensed licensed, BindingResult result, Model model){
+		
+		model.addAttribute("types", LicensedTypeEnum.values());
+		model.addAttribute("specialities", SpecialityEnum.values());
 		
 		if(result.hasErrors()) {
 			model.addAttribute("title", "Adicionar Credenciado");
